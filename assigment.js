@@ -41,7 +41,7 @@ class Employee {
 
     assign(Vehicle) {
 
-        if (Vehicle.crew = []) {
+        if (Vehicle.crew.length === 0) {
             // if ((Vehicle.type === "Plane") && (this.title === "Pilot")) {
                 this.currentVehicle = Vehicle.name;
                 Vehicle.crew.push(this);
@@ -68,11 +68,11 @@ let e5 = new Employee("Jason", "Captain")
 let e6 = new Employee("Jackie", "Crew")
 
 
-console.log(v1.canGo())
-console.log(e2.assign(v1))
+// console.log(v1.canGo())
+// console.log(e2.assign(v1))
+// console.log(v1)
+console.log(e6.assign(v1))
 console.log(v1)
-console.log(e3.assign(v1))
-
 // Employee
 //name (string)
 //title (string: driver, captain, pilot, engineer)
