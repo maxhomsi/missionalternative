@@ -40,16 +40,20 @@ class Employee {
     }
 
     assign(Vehicle) {
+if ((Vehicle.type === "Plane") && (this.title === "Pilot") || (Vehicle.type === "Bus") && (this.title === "Driver") || (Vehicle.type === "Boat") && (this.title === "Captain") || (Vehicle.type === "Train") && (this.title === "Crew") ){
+    if (Vehicle.crew.length === 0) {
+    // if ((Vehicle.type === "Plane") && (this.title === "Pilot")) {
+        this.currentVehicle = Vehicle.name;
+        Vehicle.crew.push(this);
 
-        if (Vehicle.crew.length === 0) {
-            // if ((Vehicle.type === "Plane") && (this.title === "Pilot")) {
-                this.currentVehicle = Vehicle.name;
-                Vehicle.crew.push(this);
-
-                return true
-            }  else {
-                return false
-            }
+        return true
+    }  else {
+        return false
+    }
+}else {
+        return false
+    }
+       
 
     }
 }
@@ -71,8 +75,9 @@ let e6 = new Employee("Jackie", "Crew")
 // console.log(v1.canGo())
 // console.log(e2.assign(v1))
 // console.log(v1)
-console.log(e6.assign(v1))
-console.log(v1)
+console.log(e6.assign(v5))
+console.log(v5)
+console.log(e1.assign(v5))
 // Employee
 //name (string)
 //title (string: driver, captain, pilot, engineer)
